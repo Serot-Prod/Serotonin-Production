@@ -112,6 +112,10 @@
   .sec-head{margin-bottom:56px;max-width:640px;}
   .sec-num{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--rust);font-size:13px;margin-bottom:12px;display:block;}
   .sec-head h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;}
+  .sec-head .jp-sub{
+    display:block;font-size:14px;font-weight:400;color:var(--gray);
+    margin-top:6px;letter-spacing:0.02em;
+  }
   .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:16px;}
 
   /* ---------- ABOUT (TOP) ---------- */
@@ -183,6 +187,19 @@
   }
 
   .fit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+
+  /* ---------- CRAFT PORTFOLIO ---------- */
+  .craft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .craft-slot{
+    aspect-ratio:4/5;
+    border:1px dashed var(--line);
+    border-radius:4px;
+    background:var(--paper-alt);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .craft-slot img{width:100%;height:100%;object-fit:cover;display:block;}
+  .craft-slot .mono{color:var(--gray);font-size:11px;}
   .fit-item{
     border:1px solid var(--line);border-radius:6px;padding:20px;
     font-size:14.5px;color:var(--ink-soft);
@@ -255,7 +272,7 @@
   .widget-card iframe{display:block;border:none;}
 
   @media(max-width:860px){
-    .about-grid,.card-grid,.contact-grid,.fit-grid{grid-template-columns:1fr;}
+    .about-grid,.card-grid,.contact-grid,.fit-grid,.craft-grid{grid-template-columns:1fr;}
     .navlinks{gap:18px;}
     section{padding:64px 0;}
     .service-detail{grid-template-columns:1fr;gap:14px;}
